@@ -1,7 +1,10 @@
 import pandas as pd
+import os
 
-# Загружаем файл
-df = pd.read_csv('/Users/anastasiia/Novikova_A_K_BBC2026/titanic/tested.csv')
+script_dir = os.path.dirname(os.path.abspath(__file__))
+csv_path = os.path.join(script_dir, 'tested.csv')
+
+df = pd.read_csv(csv_path)
 print("Файл успешно загружен!")
 
 # --- ЧАСТЬ II ---
